@@ -10,10 +10,10 @@ class Solution:
         leftHalf = nums[:mid]
         rightHalf = nums[mid:]
 
-        sortedLeft = mergeSort(leftHalf)
-        sortedRight = mergeSort(rightHalf)
+        sortedLeft = self.mergeSort(leftHalf)
+        sortedRight = self.mergeSort(rightHalf)
 
-        return merge(sortedLeft, sortedRight)                
+        return self.merge(sortedLeft, sortedRight)                
     
     def merge(self,left, right):
         result = []
