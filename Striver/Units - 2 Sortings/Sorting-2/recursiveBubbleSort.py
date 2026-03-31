@@ -1,52 +1,29 @@
-class Solution:
-    """
-        bubbleSort:
-            function:
-                bubblesortRecursive: recursive 
-                    function to sort array
-                __str__: format print of array 
-                __init__: constructor
-                    function in python 
-            variables:
-                self.array = contains array 
-                self.length= length of array
-    """
-    def __init__(self,array ):
-        self.array = array
-        self.length = len(array)
+def bubble_sort(arr, n):
+    # Base case: only one element left
+    if n == 1:
+        return
 
-    def __str__(self):
-        return " ".join([str(x) for x in self.array])
-    
-    def BubbleSortRecursive(self, n=None) :
+    did_swap = False  # Flag to detect swap
 
+    # Single pass: move the largest to the end
+    for j in range(n - 1):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            did_swap = True
 
-        if n is None:
-            n = self.length    
-        
-        count = 0
+    # If no swaps occurred, list is already sorted
+    if not did_swap:
+        return
 
-        if n == 1:
-            return 
-        
+    # Recurse on the smaller array
+    bubble_sort(arr, n - 1)
 
-        for i in range(n-1):
-            if self.array[i] > self.array[i + 1]:
-                self.array[i], self.array[i + 1] = self.array[i + 1],self.array[i]
-                count = count + 1
-        if (count == 0):
-            return 
-        
-        self.BubbleSortRecursive(n - 1)
+# Driver code
+arr = [13, 46, 24, 52, 20, 9]
+print("Before Using Bubble Sort:")
+print(arr)
 
-def main():
-        
+bubble_sort(arr, len(arr))
 
-    nums = [7,3,6,4]
-    sol = Solution(nums)
-    sol.BubbleSortRecursive()
-
-    print("Sorted array :\n", sol)
-
-if __name__ == "__main__":
-    main()
+print("After Using Bubble Sort:")
+print(arr)
