@@ -16,19 +16,3 @@ if __name__ == "__main__":
 
 
 
-# class Solutuon:
-#     def largestElement(self,nums, n):
-        
-
-
-#         return
-
-# def main():
-
-#     sol = Solutuon()
-#     n = input("Size of the array : ")
-#     array = list(map(int, n.split()))
-#     print(sol.largestElement(array, n))
-
-# if __name__ == "__main__":
-#     main()
