@@ -14,7 +14,7 @@ class Solution:
 
             temp[i - 1] = nums[i]
 
-        temp[n -1 ]  =  nums[0]
+        temp[n - 1]  =  nums[0]
 
         for num in temp:
             print(num, end=" ")
