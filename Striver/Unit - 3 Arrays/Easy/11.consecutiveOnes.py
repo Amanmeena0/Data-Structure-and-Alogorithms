@@ -12,9 +12,9 @@ class Solution:
             if(nums[i] == 1):
                 ones+=1
             else:
-                MaxOnes =  max(MaxOnes, ones)
                 ones = 0
 
+            MaxOnes =  max(MaxOnes, ones)
         return MaxOnes
             
 def main():
