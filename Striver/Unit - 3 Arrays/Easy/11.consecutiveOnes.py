@@ -11,10 +11,10 @@ class Solution:
 
             if(nums[i] == 1):
                 ones+=1
+                MaxOnes =  max(MaxOnes, ones)
             else:
                 ones = 0
 
-            MaxOnes =  max(MaxOnes, ones)
         return MaxOnes
             
 def main():
