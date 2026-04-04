@@ -4,16 +4,14 @@ class Solution:
 
     #brute force approach 
     def missingNumber(self, nums: List[int]) -> int:
-        missingNumber = 0
         n = len(nums)
         nums.sort()
 
-        for i in range(n+1):
+        for i in range(n):
+            if nums[i] != i:
+                return i
 
-            if i != nums[i]:
-                missingNumber = i
-
-        return missingNumber
+        return n  # if all indices match
             
 def main():
 
