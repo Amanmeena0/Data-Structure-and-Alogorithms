@@ -3,7 +3,7 @@ from typing import List
 class Solution:
 
     #brute force approach 
-    def unionArray(self, nums: List[int]) -> int:
+    def missingNumber(self, nums: List[int]) -> int:
         missingNumber = 0
         n = len(nums)
         nums.sort()
@@ -20,8 +20,10 @@ def main():
     sol = Solution()
     array = list(map(int, input("Enter numbers separated by spaces: ").split()))
 
-    print(sol.unionArray(array))
+    print(sol.missingNumber(array))
     
 
 if __name__ == "__main__":
     main()
+
+
