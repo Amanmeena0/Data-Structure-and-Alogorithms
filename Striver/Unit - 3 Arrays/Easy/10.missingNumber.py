@@ -11,14 +11,20 @@ class Solution:
             if nums[i] != i:
                 return i
 
-        return n  # if all indices match
+        return n  
+    
+    #optimal 
+    def missingNumber1(self, nums:List[int])->int:
+
+        n = len(nums)
+        return n * (n + 1) // 2 - sum(nums)
             
 def main():
 
     sol = Solution()
     array = list(map(int, input("Enter numbers separated by spaces: ").split()))
 
-    print(sol.missingNumber(array))
+    print(sol.missingNumber1(array))
     
 
 if __name__ == "__main__":
