@@ -6,26 +6,35 @@ class Solution:
     def unionArray(self, nums1: List[int], nums2:list[int]) -> List[int]:
 
 
-        Union = []
+        union = []
         i , j= 0 ,0 
 
         while i < len(nums1) and j < len(nums2):
 
             if nums1[i] < nums2[j]:
-                Union.insert(nums1[i])
+                if len(union) == 0 or union[-1] != nums1[i]:
+                    union.append(nums1[i])
                 i+=1
             elif nums1[i] > nums2[j]:
-                Union.insert(nums2[j])
+                if len(union) == 0 or union[-1] != nums2[j]:
+                    union.append(nums2[j])
                 j+=1
-            elif nums1[i] == nums2[j]:
-                Union.nums1[i]
+            else:  # nums1[i] == nums2[j]
+                if not union or union[-1] != nums1[i]:
+                    union.append(nums1[i])
                 i += 1
                 j += 1
-        
-        
 
-
-        return Union
+        while i < len(nums1):
+            if union[-1] != nums1[i]:
+                union.append(nums1[i])
+            i +=1 
+        while j < len(nums2):
+            if union.append(nums2[j]):
+                union.append(nums2[j])
+            j +=1 
+        
+        return union
             
 def main():
 
