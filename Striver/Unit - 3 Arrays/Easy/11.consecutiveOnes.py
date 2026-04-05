@@ -2,7 +2,7 @@ from typing import List
 
 class Solution:
 
-    #brute force approach 
+    
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
         
         MaxOnes = 0    
