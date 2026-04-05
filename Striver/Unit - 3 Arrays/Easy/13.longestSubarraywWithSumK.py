@@ -7,8 +7,10 @@ class Solution:
         for i in range(len(nums)):
 
             sum = 0
-            for j in range(i):
+            for j in range(i, len(nums)):
+                
                 sum += nums[j]
+
                 if sum == k:
                     size = j
                     break
