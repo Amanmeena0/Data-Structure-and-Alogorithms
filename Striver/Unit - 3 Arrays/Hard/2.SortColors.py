@@ -16,7 +16,6 @@ class Solution:
             if nums[mid] == 2:
                 nums[mid], nums[high] = nums[high], nums[mid]
                 high -= 1
-                mid+=1
             elif nums[mid] == 0:
                 nums[mid], nums[low] = nums[low],nums[mid]
                 low+=1
@@ -25,19 +24,16 @@ class Solution:
                 mid+=1
                 
 
-
-
-
-
-
         
 def main():
 
     sol = Solution()
     array = list(map(int, input("Enter numbers separated by spaces: ").split()))
-    k = int(input("Enter the number: "))
-    print(sol.longestSubarray(array,k))
-    
+    # k = int(input("Enter the number: "))
+    # print(sol.sortColors(array))
+    sol.sortColors(array)
+    for i in array:
+        print(i, end=" ")
 
 if __name__ == "__main__":
     main()
