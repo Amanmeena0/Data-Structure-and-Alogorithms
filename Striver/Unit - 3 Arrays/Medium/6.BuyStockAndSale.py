@@ -3,10 +3,13 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
         profit = 0
-        for buy in range(len(prices)):
-            for sell in range(len(prices)):
-                if prices[buy] < prices[sell]:
-                    profit = max(profit, prices[sell] - prices[buy])
+        Buy = prices[0]
+        for i in range(1,len(prices)):
+            if prices[i] < Buy:
+                Buy = prices[i] 
+
+            profit = max(profit,prices[i] - Buy)
+            
         return profit 
         
 def main():
