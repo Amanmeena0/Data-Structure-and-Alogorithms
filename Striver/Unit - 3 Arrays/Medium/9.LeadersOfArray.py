@@ -5,20 +5,15 @@ class Solution:
         
         ans = []
         n = len(nums)
-        number = nums[n-1]
-        for i in range(n-2,-1, -1):
+        number = float('-inf')
+        for i in range(n-1,-1, -1):
             
             if nums[i] > number:
                 number = nums[i]
-                ans.append(number)  
-            else:
-                
-            
-            
-            
-        
+                ans.append(number)        
 
-        return ans
+       
+        return ans[::-1]
     
 def main():
 
