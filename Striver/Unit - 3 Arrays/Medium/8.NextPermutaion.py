@@ -15,6 +15,29 @@ class Solution:
             self.swap(nums, i, j)
         self.reverse(nums, i + 1)
 
+    def nextPermutation(self, nums)->None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        pivot = -1
+        n = len(nums)
+        for i in range(n-2, -1, -1):
+            if(nums[i] < nums[i+ 1]):
+                pivot = i
+                break
+
+        if(pivot == -1): 
+            self.reverse(nums,0) 
+            return
+        
+        for i in range(n-1, pivot, -1):
+            if(nums[i] > nums[pivot]):
+                self.swap(nums, i, pivot)
+                break
+        
+        self.reverse(nums, pivot+1)
+
+
     def reverse(self, nums, start):
         i, j = start, len(nums) - 1
         while i < j:
@@ -26,11 +49,7 @@ class Solution:
         temp = nums[i]
         nums[i] = nums[j]
         nums[j] = temp
-                
-
-                
         return nums
-
 
 def main():
 
