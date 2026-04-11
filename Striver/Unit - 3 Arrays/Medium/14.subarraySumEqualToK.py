@@ -18,7 +18,7 @@ class Solution:
 
         return n
     
-
+    #betteer approach
     def subarraySum(self, nums: List[int], k: int) -> int:
         
         prefix_count = defaultdict(int)
@@ -35,7 +35,23 @@ class Solution:
             
             prefix_count[curr_sum] += 1
         
-        return count      
+        return count 
+
+    #optimal Approach
+
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        sub_num = {0:1}
+        total = count = 0
+
+        for n in nums:
+            total += n
+            
+            if total - k in sub_num:
+                count += sub_num[total-k]
+            
+            sub_num[total] = 1 + sub_num.get(total, 0)
+        
+        return count     
 
 
 def main():
