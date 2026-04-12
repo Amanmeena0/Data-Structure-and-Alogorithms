@@ -38,7 +38,6 @@ class Solution:
         return count 
 
     #optimal Approach
-
     def subarraySum(self, nums: List[int], k: int) -> int:
         sub_num = {0:1}
         total = count = 0
