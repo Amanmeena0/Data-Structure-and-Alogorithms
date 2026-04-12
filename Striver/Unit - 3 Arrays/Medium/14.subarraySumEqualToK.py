@@ -22,7 +22,7 @@ class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         
         prefix_count = defaultdict(int)
-        prefix_count[0] = 1   # important base case
+        prefix_count[0] = 1   # important base case5 
         
         curr_sum = 0
         count = 0
