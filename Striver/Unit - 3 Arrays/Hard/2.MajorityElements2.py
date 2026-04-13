@@ -9,13 +9,11 @@ class Solution:
         n = len(array)
         n /= 3
 
-
         for key in freq:
             
             if freq[key] > n:
                 res.append(key)
         
-
         return res
 
     def majorityElement(self, array:List[int]) -> List[int]:
@@ -49,10 +47,6 @@ class Solution:
         
         return list(set(result))
             
-
-
-
-
 def main():
 
     sol = Solution()
