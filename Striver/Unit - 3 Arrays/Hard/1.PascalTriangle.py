@@ -6,7 +6,7 @@ class Solution:
         
         for i in range(numRows- 1):
 
-            temp = [0] + triangle[-1] + [0]
+            temp = [0] + triangle[-1] + [0]     
 
             row = []
 

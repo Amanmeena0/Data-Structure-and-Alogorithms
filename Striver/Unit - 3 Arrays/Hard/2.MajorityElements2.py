@@ -16,6 +16,8 @@ class Solution:
         
         return res
 
+    #voting algo
+
     def majorityElement(self, array:List[int]) -> List[int]:
         if not array:
             return []
