@@ -24,7 +24,22 @@ def maximum_subsequence(Array):
 
     return count
 
+def maximum_subsequence(arr):
 
+    arr.sort(reversed=True)
+
+    total = 0
+    count = 0
+
+    for num in arr:
+
+        if total + num >= 0:
+            total =+ num 
+            count += 1
+        else:
+            break
+
+    return count
 
 
 

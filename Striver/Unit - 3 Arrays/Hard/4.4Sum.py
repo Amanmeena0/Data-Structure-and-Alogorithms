@@ -12,7 +12,7 @@ class Solution:
                 return 
             
             for j in range(i + 1, n):
-                23
+                235
                 if j > i + 1 and nums[j] == nums[j-1]:
                     continue
 
