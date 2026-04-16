@@ -1,24 +1,49 @@
 from typing import List
-
-
 class Solution:
-    def subarraysWithXorK(self,arr:List[int], k : int)->int:
+    def SubarraysWithXorK(self,arr:List[int], k : int)->int:
         
         count = 0
-
         for i in range(len(arr)):
+            xored = 0
 
             for j in range(i, len(arr)):
-
                 
+                xored ^= arr[j]
 
-        return 
+                if xored ==  k:
+                    count +=1            
 
+        return count 
+
+    #using prefix Sum
+    def SubarraysWithXorK1(self, arr: List[int], k:int)->int:
+
+        res = 0
+        current_xor = 0
+        freq = {}
+        freq = {0:1}
+
+        for num in arr:
+
+            current_xor ^= num
+
+            target = current_xor ^ k
+
+            if target in freq:
+
+                res += freq[target]
+
+            freq[current_xor] = freq.get(current_xor,0) + 1
+
+        return res
+
+
+        
 def main():
     sol = Solution()
     array = list(map(int, input("Enter numbers separated by spaces: ").split()))
     k = int(input("Enter the integer: "))
-    print(sol.subarraysWithXorK(array))
+    print(sol.SubarraysWithXorK(array,k))
 
     
 if __name__ == "__main__":
