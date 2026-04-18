@@ -2,8 +2,20 @@ from typing import List
 from collections import Counter
 class Solution:
     def findMissingRepeatingNumbers(self, nums):
-        Counter()
-        return
+        n = len(nums)
+        freq = Counter(nums)
+        sorted(freq.items())
+        repeating = -1
+        missing = -1
+    
+        for i in range(1, n + 1):
+
+            if freq[i] == 0 :
+                missing = i
+            elif freq[i] == 2:
+                repeating = i
+            
+        return [repeating, missing]
         
 def main():
     sol = Solution()
