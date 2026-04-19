@@ -3,7 +3,9 @@ from typing import List
 class Solution:
     def numberOfInversions(self, nums: list[int], target:int) -> list[list[int]]:
         
+
         
+
 
 
         return 
