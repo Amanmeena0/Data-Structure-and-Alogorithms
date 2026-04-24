@@ -29,7 +29,7 @@ class Solution:
             if prefix_sum not in freq:
                 freq[prefix_sum] = i
             
-            curr_size = i - freq[prefix_sum]
+            curr_size = i - freq[prefix_sum] 
 
             max_size = max(max_size, curr_size)
 

@@ -36,9 +36,8 @@ class Solution:
             freq[current_xor] = freq.get(current_xor,0) + 1
 
         return res
-
-
-        
+    
+    #{4, 2, 2, 6, 4},D k = 6, output = 4   
 def main():
     sol = Solution()
     array = list(map(int, input("Enter numbers separated by spaces: ").split()))
