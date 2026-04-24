@@ -53,16 +53,15 @@ class Solution:
     def mergeSort(self, arr, low , high):
         cnt = 0
 
-        if low >= high:
-            return cnt 
-        
-        mid = (low + high) // 2
+        if low < high:
+           
+            mid = (low + high) // 2
 
-        cnt += self.mergeSort(arr, low, mid)
+            cnt += self.mergeSort(arr, low, mid)
 
-        cnt += self.mergeSort(arr, mid + 1, high)
+            cnt += self.mergeSort(arr, mid + 1, high)
 
-        cnt += self.merge(arr, low, mid, high)
+            cnt += self.merge(arr, low, mid, high)
 
         return cnt
     
