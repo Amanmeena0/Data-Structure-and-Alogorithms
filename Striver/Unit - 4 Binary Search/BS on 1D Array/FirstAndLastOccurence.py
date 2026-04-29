@@ -5,20 +5,14 @@ class Solution:
         
         low = 0
         high = len(nums) - 1
-        
-        while low <= high:
 
+        while low <= high:
+        
             mid = (low + high) // 2
 
-            if nums[mid] == target: 
-                return [nums[mid],nums[mid]]
-            elif nums[mid] > target:
-                high = mid-1
-            elif nums[mid] < target:
-                low = mid + 1 
-        return [nums[high],nums[low]]
-
-
+            if target == nums[mid]:
+                fun = 9
+        return
 def main():
 
     sol = Solution()
