@@ -3,16 +3,42 @@ from typing import List
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         
-        low = 0
-        high = len(nums) - 1
+        def binary_search(nums,target, is_searching_left):
 
-        while low <= high:
-        
-            mid = (low + high) // 2
+            low = 0
+            high = len(nums) -1
+            idx = -1
 
-            if target == nums[mid]:
-                fun = 9
-        return
+            while low <= high:
+
+                mid = (low + high) // 2
+
+                if nums[mid] < target:
+                    low = mid + 1
+                elif nums[mid] > target:
+                    high = mid - 1
+                else:
+
+                    idx = mid
+
+                    if is_searching_left:
+                        high = mid - 1
+                    else:
+                        low = mid + 1
+
+            return idx
+    
+        left = binary_search(nums, target, True)
+        right = binary_search(nums, target, False)
+
+
+        return [left, right]
+
+                        
+
+                
+
+        return [-1,-1]
 def main():
 
     sol = Solution()
