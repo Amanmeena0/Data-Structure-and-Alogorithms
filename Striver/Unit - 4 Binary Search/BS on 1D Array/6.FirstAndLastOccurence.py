@@ -33,12 +33,7 @@ class Solution:
 
 
         return [left, right]
-
-                        
-
-                
-
-        return [-1,-1]
+    
 def main():
 
     sol = Solution()
